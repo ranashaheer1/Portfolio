@@ -362,7 +362,7 @@ section.active {
     background: var(--white-color);
     border-radius: 50%;
     padding: 1rem;
-    transoition: .5s;
+    transition: .5s;
 }
 
 .services-box:hover .icon a {
@@ -849,14 +849,22 @@ section.active {
     }
 
     .home {
-        flex-direction: coloumn-reverse;
+        flex-direction: column-reverse;
         justify-content: center;
+        align-items: center;
         gap: 2rem;
+        text-align: center;
+    }
+
+    .home-detail {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .home-img .img-box {
-        width: 35rem;
-        height: 35rem;
+        width: min(35rem, 70vw);
+        height: min(35rem, 70vw);
     }
 
     .resume-container,
@@ -878,10 +886,9 @@ section.active {
 }
 
 @media screen and (max-width: 600px) {
-    .home-img.img-box {
-        width: 30rem;
-        height: 30rem;
-
+    .home-img .img-box {
+        width: min(30rem, 75vw);
+        height: min(30rem, 75vw);
     }
 
     .contact-box .field-box {
@@ -900,15 +907,18 @@ section.active {
     .resume-box .desc,
     .resume-detail.about .resume-item {
         text-align: center;
+        display: flex;
+        flex-direction: column;
+
     }
 
     .home-detail .btn-sci {
-        flex-direction: coloumn-reverse;
+        flex-direction: column-reverse;
+        align-items: center;
     }
 
     .home-detail .btn-sci .sci {
-        margin-left: 0;
-        margin-bottom: 2rem;
+        margin: 0 0 2rem;
     }
 
     .contact-box form {
